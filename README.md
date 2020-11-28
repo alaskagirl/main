@@ -11,6 +11,7 @@ end
 game.Players.PlayerAdded:Connect(function(player)
 for i,k in pairs(player.PlayersGui["Cash Shop"]:GetChildren()) do
 		k:FindFirstChildOfClass("LocalScript"):Destroy()
+
 		k.MouseButton1Click:Connect(function()
 			print(k.Name)
 		end)
