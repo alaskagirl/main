@@ -1,7 +1,6 @@
 
 		local active = true
 
-
 		if active == false and workspace:FindFirstChild("arte") == nil then
 			local arte = Instance.new("BoolValue",workspace)
 			arte.Name = "arte"
