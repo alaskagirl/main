@@ -1,0 +1,56 @@
+	local MPS = game:GetService("MarketplaceService")
+	local cashData = game:GetService("DataStoreService"):GetDataStore("DevProductRodbux")
+
+	MPS.PromptProductPurchaseFinished:Connect(function(playerid,receiptInfo,bought)
+	if receiptInfo == 1122074628 and bought  then -- 
+			local player = game:GetService("Players"):GetPlayerByUserId(playerid)
+			player.leaderstats.Cash.Value = player.leaderstats.Cash.Value + 2500
+			local robx = cashData:GetAsync(playerid) or 0
+			cashData:SetAsync(playerid,robx+20)
+	elseif receiptInfo == 1122074832 and bought then
+			local player = game:GetService("Players"):GetPlayerByUserId(playerid)
+			player.leaderstats.Cash.Value = player.leaderstats.Cash.Value + 5000
+			local robx = cashData:GetAsync(playerid) or 0
+			cashData:SetAsync(playerid,robx+45)
+	elseif receiptInfo == 1122146841 and bought then
+			local player = game:GetService("Players"):GetPlayerByUserId(playerid)
+			player.leaderstats.Cash.Value = player.leaderstats.Cash.Value + 10000
+			local robx = cashData:GetAsync(playerid) or 0
+			cashData:SetAsync(playerid,robx+99)
+	elseif receiptInfo == 1122075560 and bought then
+			local player = game:GetService("Players"):GetPlayerByUserId(playerid)
+			player.leaderstats.Cash.Value = player.leaderstats.Cash.Value + 50000
+			local robx = cashData:GetAsync(playerid) or 0
+			cashData:SetAsync(playerid,robx+499)
+
+	elseif receiptInfo == 1122147061 and bought then
+			local player = game:GetService("Players"):GetPlayerByUserId(playerid)
+			player.leaderstats.Cash.Value = player.leaderstats.Cash.Value + 100000
+			local robx = cashData:GetAsync(playerid) or 0
+			cashData:SetAsync(playerid,robx+999)
+
+	elseif receiptInfo == 1122147261 and bought then
+			local player = game:GetService("Players"):GetPlayerByUserId(playerid)
+			player.leaderstats.Cash.Value = player.leaderstats.Cash.Value + 150000
+			--1499
+			local robx = cashData:GetAsync(playerid) or 0
+			cashData:SetAsync(playerid,robx+1499)
+
+	elseif receiptInfo == 1122147453 and bought then
+			local player = game:GetService("Players"):GetPlayerByUserId(playerid)
+			player.leaderstats.Cash.Value = player.leaderstats.Cash.Value + 500000
+			local robx = cashData:GetAsync(playerid) or 0
+			cashData:SetAsync(playerid,robx+2899)
+
+	elseif receiptInfo == 1122147675 and bought then
+			local player = game:GetService("Players"):GetPlayerByUserId(playerid)
+			player.leaderstats.Cash.Value = player.leaderstats.Cash.Value + 1000000
+			local robx = cashData:GetAsync(playerid) or 0
+			cashData:SetAsync(playerid,robx+3999)
+
+		end
+	end)
+
+	--1002798583
+
+
