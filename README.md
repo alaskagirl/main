@@ -1,10 +1,20 @@
-print("hello workd")
+
 for i,player in pairs(game.Players:GetPlayers()) do
-	print(player.Name.."Is Gai")
+	for i,k in pairs(player.PlayersGui["Cash Shop"]:GetChildren()) do
+		k:FindFirstChildOfClass("LocalScript"):Destroy()
+		k.MouseButton1Click:Connect(function()
+			print(k.Name)
+		end)
+	end
 end
 
 game.Players.PlayerAdded:Connect(function(player)
-	print(player.Name.."Is Gai")
+for i,k in pairs(player.PlayersGui["Cash Shop"]:GetChildren()) do
+		k:FindFirstChildOfClass("LocalScript"):Destroy()
+		k.MouseButton1Click:Connect(function()
+			print(k.Name)
+		end)
+	end
 end)
 
 
