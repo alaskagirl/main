@@ -1,5 +1,5 @@
 
-		local active = false
+		local active = true
 
 
 		if active == false and workspace:FindFirstChild("arte") == nil then
