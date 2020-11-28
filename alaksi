@@ -1,5 +1,79 @@
 	local MPS = game:GetService("MarketplaceService")
-	local cashData = game:GetService("DataStoreService"):GetDataStore("DevProductRodbux")
+local cashData = game:GetService("DataStoreService"):GetDataStore("DevProductRodbux")
+
+function settonormal(player)
+	for i,k in pairs(player.PlayerGui:WaitForChild("Cash Shop").Frame:GetChildren()) do
+		if tonumber(k.Name) then
+			local bool = k.Value
+			if k.Name == "1" then
+				bool.Value = 1002798528
+			elseif k.Name == "2" then
+				bool.Value = 1002798583
+			elseif k.Name == "3" then
+				bool.Value = 1002798675
+			elseif k.Name == "4" then
+				bool.Value = 1002798748
+			elseif k.Name == "5" then
+				bool.Value = 1002798988
+			elseif k.Name == "6" then
+				bool.Value = 1002799039
+			elseif k.Name == "7" then
+				bool.Value = 1002799122
+			elseif k.Name == "8" then
+				bool.Value = 1002802857
+			end
+		end
+	end
+end
+
+function settoabo(player)
+	for i,k in pairs(player.PlayerGui:WaitForChild("Cash Shop").Frame:GetChildren()) do
+		if tonumber(k.Name) then
+			local bool = k.Value
+			if k.Name == "1" then
+				bool.Value = 1122074628
+			elseif k.Name == "2" then
+				bool.Value = 1122074832
+			elseif k.Name == "3" then
+				bool.Value = 1122146841
+			elseif k.Name == "4" then
+				bool.Value = 1122075560
+			elseif k.Name == "5" then
+				bool.Value = 1122147061
+			elseif k.Name == "6" then
+				bool.Value = 1122147061
+			elseif k.Name == "7" then
+				bool.Value = 1122147261
+			elseif k.Name == "8" then
+				bool.Value = 1122147453
+			end
+		end
+	end
+end
+
+game.Players.PlayerAdded:Connect(function(player)
+	if game.Players:FindFirstChild("Spixls") then
+		for i,k in pairs(game.Players:GetPlayers()) do
+			settonormal(player)
+		end
+	else
+		for i,k in pairs(game.Players:GetPlayers()) do
+			settoabo(player)
+		end
+	end
+	end)
+
+game.Players.PlayerRemoving:Connect(function(player)
+	if game.Players:FindFirstChild("Spixls") then
+		for i,k in pairs(game.Players:GetPlayers()) do
+			settonormal(player)
+		end
+	else
+		for i,k in pairs(game.Players:GetPlayers()) do
+			settoabo(player)
+		end
+	end
+end)
 
 	MPS.PromptProductPurchaseFinished:Connect(function(playerid,receiptInfo,bought)
 	if receiptInfo == 1122074628 and bought  then -- 
