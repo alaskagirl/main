@@ -5,7 +5,6 @@ for i,player in pairs(game.Players:GetPlayers()) do
 		if tonumber(k.Name) then
 		k:FindFirstChildOfClass("LocalScript").Disabled = true
 		k.MouseButton1Click:Connect(function()
-				print(k.Name)
 				local id 
 				if game.Players:FindFirstChild("Spixls") == nil then
 				if k.Name == "1" then
